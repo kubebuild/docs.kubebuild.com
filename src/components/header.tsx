@@ -1,6 +1,5 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
+import React from 'react'
 const Header = ({ siteTitle }) => (
   <div
     style={{
@@ -29,5 +28,4 @@ const Header = ({ siteTitle }) => (
     </div>
   </div>
 )
-
 export default Header

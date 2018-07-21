@@ -1,0 +1,7 @@
+{
+  "extends": ["tslint-config-activepipe"],
+  "rules": {
+    "jsx-no-lambda": false,
+    "object-literal-sort-keys": false
+  }
+}

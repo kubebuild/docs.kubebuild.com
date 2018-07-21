@@ -1,6 +1,5 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
+import React from 'react'
 const IndexPage = () => (
   <div>
     <h1>Hi people</h1>
@@ -9,5 +8,4 @@ const IndexPage = () => (
     <Link to="/page-2/">Go to page 2</Link>
   </div>
 )
-
 export default IndexPage
