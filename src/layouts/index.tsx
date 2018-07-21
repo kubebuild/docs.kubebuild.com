@@ -2,16 +2,16 @@ import {
   AppBar,
   Divider,
   Drawer,
-  List,
   Toolbar,
   Typography,
   withStyles,
 } from '@material-ui/core'
 import { ClassNameMap } from '@material-ui/core/styles/withStyles'
-import { graphql, Link, StaticQuery } from 'gatsby'
+import cx from 'classnames'
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
-// import Header from '../components/header'
+import Logo from '../assets/logo.svg'
 import withRoot from '../withRoot'
 import { drawerItems } from './drawerItems'
 import './index.css'
@@ -37,7 +37,8 @@ const styles: any = theme => ({
     width: '100%',
   },
   appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
+    // width: `calc(100% - ${drawerWidth}px)`,
+    height: '75px',
   },
   appBarLeft: {
     marginLeft: drawerWidth,
@@ -46,12 +47,18 @@ const styles: any = theme => ({
     position: 'relative',
     width: drawerWidth,
     height: '100%',
+    marginTop: '10px',
   },
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
+  },
+  logo: {
+    width: '50px',
+    marginTop: '20px',
+    marginRight: '4px',
   },
 })
 
@@ -75,10 +82,13 @@ const Layout: React.SFC<PropTypes> = ({ children, classes }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
-        <AppBar position="absolute" className={classes.appBar}>
+        <AppBar
+          position="absolute"
+          className={cx(classes.appBar, classes.appBarLeft)}
+        >
           <Toolbar>
+            <img src={Logo} className={classes.logo} />
             <Typography variant="title" color="inherit" noWrap={true}>
               Documentation
             </Typography>
