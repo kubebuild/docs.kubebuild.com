@@ -11,7 +11,7 @@ export const drawerItems = (
         </Link>
       </ListItem>
       <ListItem>
-        <Link to="/pipelines/">
+        <Link to="/docs/pipelines/">
           <ListItemText primary="Pipelines" />
         </Link>
       </ListItem>
