@@ -76,13 +76,9 @@ const Layout: React.SFC<PropTypes> = ({ children, classes }) => (
     `}
     render={(data: any) => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
+        <Helmet title={data.site.siteMetadata.title}>
+          <link rel="icon" type="image/png" href="/favicon/favicon.png" />
+        </Helmet>
 
         <AppBar
           position="absolute"

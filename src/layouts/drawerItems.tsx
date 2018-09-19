@@ -4,6 +4,10 @@ import React from 'react'
 
 const listItems = [
   {
+    path: '/',
+    title: 'Argo Workflow',
+  },
+  {
     path: '/terms-of-service',
     title: 'Terms of Service',
   },
@@ -13,6 +17,15 @@ const listItems = [
   },
 ]
 
+const isSelected = (pathname: string, itemPath: string) => {
+  if (pathname === '/' && itemPath === '/' && pathname === itemPath) {
+    return true
+  } else if (itemPath !== '/') {
+    return pathname.startsWith(itemPath)
+  }
+  return false
+}
+
 export const drawerItems = (
   <Match path="/*">
     {props => (
@@ -20,7 +33,7 @@ export const drawerItems = (
         {listItems.map(item => (
           <ListItem
             key={item.path}
-            selected={props.location.pathname.startsWith(item.path)}
+            selected={isSelected(props.location.pathname, item.path)}
           >
             <Link to={item.path}>
               <ListItemText primary={item.title} />
