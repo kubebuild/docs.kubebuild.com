@@ -1,6 +1,7 @@
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
+import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext from './getPageContext'
 
 interface PropTypes {
@@ -24,13 +25,17 @@ function withRoot(Component) {
     public render() {
       // MuiThemeProvider makes the theme available down the React tree thanks to React context.
       return (
-        <MuiThemeProvider
-          theme={this.pageContext.theme}
-          sheetsManager={this.pageContext.sheetsManager}
-        >
-          <CssBaseline />
-          <Component {...this.props} />
-        </MuiThemeProvider>
+        <JssProvider generateClassName={this.pageContext.generateClassName}>
+          {/* MuiThemeProvider makes the theme available down the React
+              tree thanks to React context. */}
+          <MuiThemeProvider
+            theme={this.pageContext.theme}
+            sheetsManager={this.pageContext.sheetsManager}
+          >
+            <CssBaseline />
+            <Component {...this.props} />
+          </MuiThemeProvider>
+        </JssProvider>
       )
     }
   }

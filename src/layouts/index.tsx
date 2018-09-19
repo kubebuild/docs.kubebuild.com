@@ -38,7 +38,8 @@ const styles: any = theme => ({
   },
   appBar: {
     // width: `calc(100% - ${drawerWidth}px)`,
-    height: '75px',
+    height: 75,
+    backgroundColor: '#909090',
   },
   appBarLeft: {
     marginLeft: drawerWidth,
@@ -56,9 +57,9 @@ const styles: any = theme => ({
     padding: theme.spacing.unit * 3,
   },
   logo: {
-    width: '50px',
-    marginTop: '20px',
-    marginRight: '4px',
+    height: 40,
+    paddingRight: 10,
+    marginTop: 25,
   },
 })
 
@@ -90,7 +91,7 @@ const Layout: React.SFC<PropTypes> = ({ children, classes }) => (
           <Toolbar>
             <img src={Logo} className={classes.logo} />
             <Typography variant="title" color="inherit" noWrap={true}>
-              Documentation
+              KUBEBUILD
             </Typography>
           </Toolbar>
         </AppBar>
