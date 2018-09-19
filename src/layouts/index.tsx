@@ -57,6 +57,7 @@ const styles: any = theme => ({
     padding: theme.spacing.unit * 3,
   },
   logo: {
+    cursor: 'pointer',
     height: 40,
     paddingRight: 10,
     marginTop: 25,
@@ -85,8 +86,18 @@ const Layout: React.SFC<PropTypes> = ({ children, classes }) => (
           className={cx(classes.appBar, classes.appBarLeft)}
         >
           <Toolbar>
-            <img src={Logo} className={classes.logo} />
-            <Typography variant="title" color="inherit" noWrap={true}>
+            <img
+              src={Logo}
+              className={classes.logo}
+              onClick={() => window.location.assign('https://kubebuild.com')}
+            />
+            <Typography
+              style={{ cursor: 'pointer' }}
+              onClick={() => window.location.assign('https://kubebuild.com')}
+              variant="title"
+              color="inherit"
+              noWrap={true}
+            >
               KUBEBUILD
             </Typography>
           </Toolbar>
