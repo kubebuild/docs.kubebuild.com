@@ -53,6 +53,7 @@ const styles: any = theme => ({
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
+    width: `calc(100% - ${drawerWidth}px)`,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
   },
