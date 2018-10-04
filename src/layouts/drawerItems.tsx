@@ -8,6 +8,10 @@ const listItems = [
     title: 'Argo Workflow',
   },
   {
+    path: '/artifact-repo',
+    title: 'Artifact Repository',
+  },
+  {
     path: '/terms-of-service',
     title: 'Terms of Service',
   },
