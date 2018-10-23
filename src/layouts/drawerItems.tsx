@@ -12,6 +12,10 @@ const listItems = [
     title: 'Artifact Repository',
   },
   {
+    path: '/docker',
+    title: 'Using Docker',
+  },
+  {
     path: '/terms-of-service',
     title: 'Terms of Service',
   },
