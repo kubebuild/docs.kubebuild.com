@@ -8,7 +8,7 @@ const listItems = [
     title: 'Argo Workflow',
   },
   {
-    path: '/default-paramas',
+    path: '/default-params',
     title: 'Default Params',
   },
   {
