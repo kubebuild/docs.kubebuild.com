@@ -61,7 +61,6 @@ spec:
             value: "{{item}}"
         withItems:
         - docker build -t registry/app:1 . && docker push registry:app:1
-        withItems:
 
   - name: ci-dind
     inputs:
